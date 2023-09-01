@@ -11,6 +11,8 @@ export default {
       // Basic colors
       "white": "#ffffff",
       "black": "#000000",
+      "transparent": "transparent",
+      "current": "currentColor",
       "error": "#da373c",
       "warning": "#fbbd23",
       "info": "#3abff8",
