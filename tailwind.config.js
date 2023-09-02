@@ -26,10 +26,12 @@ export default {
       "neutral-light": "#40424a",
       "neutral-lighter": "#949aa4",
     },
-    borderRadius: {
-      "sm": "3px",
+    extend: {
+      borderRadius: {
+        "sm": "3px",
+        "circle": "50%",
+      },
     },
-    extend: {},
   },
   plugins: [],
 }
