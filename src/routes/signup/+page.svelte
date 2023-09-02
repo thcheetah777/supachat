@@ -7,10 +7,10 @@
   let email = "";
   let password = "";
 
-  const handleLogin = async () => {
-    const { error } = await data.supabase.auth.signInWithPassword({
+  const handleSignUp = async () => {
+    const { error } = await data.supabase.auth.signUp({
       email,
-      password
+      password,
     });
 
     if (error) {
@@ -22,9 +22,9 @@
   }
 </script>
 
-<form on:submit|preventDefault={handleLogin}>
+<form on:submit|preventDefault={handleSignUp}>
   <input type="email" name="email" class="text-black" bind:value={email} />
   <input type="password" name="password" class="text-black" bind:value={password} />
 
-  <button type="submit">Login</button>
+  <button type="submit">Sign Up</button>
 </form>

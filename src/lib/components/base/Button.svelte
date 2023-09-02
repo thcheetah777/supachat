@@ -4,7 +4,7 @@
   export let outline = false;
 
   export { className as class };
-  let className: string;
+  let className: string = "";
 </script>
 
 <button
@@ -14,7 +14,7 @@
       "bg-primary hover:bg-secondary active:bg-tertiary": !outline,
       "bg-transparent hover:bg-primary active:bg-secondary border-primary border-[1px]": outline,
     },
-    className
-  )}>
+    className,
+  )} type={$$restProps.type}>
   <slot />
 </button>
