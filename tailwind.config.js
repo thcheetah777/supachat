@@ -7,6 +7,8 @@ export default {
     colors: {
       // Theme colors
       "primary": "#29a372",
+      "secondary": "#258E64",
+      "tertiary": "#1F7A56",
 
       // Basic colors
       "white": "#ffffff",
@@ -23,6 +25,9 @@ export default {
       "neutral": "#323439",
       "neutral-light": "#40424a",
       "neutral-lighter": "#949aa4",
+    },
+    borderRadius: {
+      "sm": "3px",
     },
     extend: {},
   },

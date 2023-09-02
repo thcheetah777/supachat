@@ -9,10 +9,10 @@
 
 <button
   class={cn(
-    "btn bg-primary px-6 py-2 rounded-sm text-sm border-primary",
+    "btn px-6 py-2 rounded-sm text-sm duration-150",
     {
-      "bg-transparent": outline,
-      "border": outline,
+      "bg-primary hover:bg-secondary active:bg-tertiary": !outline,
+      "bg-transparent hover:bg-primary active:bg-secondary border-primary border-[1px]": outline,
     },
     className
   )}>
