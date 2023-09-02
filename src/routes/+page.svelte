@@ -1,5 +1,6 @@
 <script lang="ts">
   import { goto } from "$app/navigation";
+  import Button from "$components/base/Button.svelte";
   import type { PageData } from "./$types";
 
   export let data: PageData;
@@ -13,4 +14,4 @@
 
 <h1>Welcome, {data.session?.user.email ?? "Random person"}!</h1>
 
-<button on:click|preventDefault={handleLogOut}>Log out</button>
+<Button on:click={handleLogOut}>Log out</Button>

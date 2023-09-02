@@ -26,6 +26,6 @@
   <title>Supachat</title>
 </svelte:head>
 
-<main class="h-screen">
+<div class="h-screen">
   <slot />
-</main>
+</div>

@@ -1,6 +1,7 @@
 <script lang="ts">
   import type { PageData } from "./$types";
   import { goto } from "$app/navigation";
+  import Button from "$components/base/Button.svelte";
 
   export let data: PageData;
 
@@ -13,18 +14,15 @@
       password,
     });
 
-    if (error) {
-      console.log(error.status);
-      return;
-    }
-
     await goto("/");
   }
 </script>
 
-<form on:submit|preventDefault={handleSignUp}>
-  <input type="email" name="email" class="text-black" bind:value={email} />
-  <input type="password" name="password" class="text-black" bind:value={password} />
+<main class="flex justify-center items-center h-full">
+  <form on:submit|preventDefault={handleSignUp} class="flex flex-col items-center">
+    <input type="email" name="email" class="text-black" bind:value={email} />
+    <input type="password" name="password" class="text-black" bind:value={password} />
 
-  <button type="submit">Sign Up</button>
-</form>
+    <Button type="submit">Sign Up</Button>
+  </form>
+</main>
