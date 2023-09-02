@@ -20,6 +20,7 @@ export default {
       "info": "#3abff8",
 
       // Neutral colors
+      "neutral-darkest": "#1e1f22",
       "neutral-darker": "#2b2d31",
       "neutral-dark": "#2d2f34",
       "neutral": "#323439",
