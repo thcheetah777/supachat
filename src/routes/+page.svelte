@@ -12,6 +12,5 @@
   }
 </script>
 
-<h1>Welcome, {data.session?.user.email ?? "random person"}!</h1>
-
+<h1>Hello, {data.session?.user.email ?? "guest"}!</h1>
 <Button outline on:click={handleLogOut}>Log out</Button>

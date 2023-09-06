@@ -1,6 +1,9 @@
 <script lang="ts">
   import { cn } from "$lib/utils"
 
+  export let message = "";
+  export let value = "";
+
   let className = "";
   export { className as class };
 </script>
@@ -9,4 +12,8 @@
   class={cn(
     "p-2 outline-none bg-neutral-darkest text-white rounded-sm",
     className,
-  )} {...$$restProps} />
+  )}
+  bind:value={value}
+  {...$$restProps} />
+
+<small class="text-error">{message}</small>

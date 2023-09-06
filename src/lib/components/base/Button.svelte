@@ -13,7 +13,7 @@
     (
       outline ?
       "bg-transparent hover:bg-primary active:bg-secondary border-primary border-[1px]" :
-      "bg-primary hover:bg-secondary active:bg-tertiary"
+      "bg-primary hover:bg-secondary active:bg-tertiary disabled:bg-neutral-dark"
     ),
     className,
   )} {...$$restProps} on:click>

@@ -7,7 +7,7 @@
   export let data: PageData;
 
   let email = "";
-  let password = "";
+  let password = "+layout";
 
   async function handleLogin() {
     const { error } = await data.supabase.auth.signInWithPassword({
@@ -26,9 +26,17 @@
 
 <main class="flex justify-center items-center h-full">
   <form on:submit|preventDefault={handleLogin} class="flex flex-col items-center space-y-2">
-    <Input type="email" name="email" bind:value={email} />
-    <Input type="password" name="password" bind:value={password} />
+    <Input
+      type="email"
+      name="email"
+      placeholder="Your email..."
+      bind:value={email} />
+    <Input
+      type="password"
+      name="password"
+      placeholder="Your password..."
+      bind:value={password} />
 
-    <Button type="submit">Login</Button>
+    <Button type="submit" disabled={!(email && password)}>Login</Button>
   </form>
 </main>

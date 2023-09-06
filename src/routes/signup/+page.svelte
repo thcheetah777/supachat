@@ -26,9 +26,17 @@
 
 <main class="flex justify-center items-center h-full">
   <form on:submit|preventDefault={handleSignUp} class="flex flex-col items-center space-y-2">
-    <Input type="email" name="email" class="text-black" bind:value={email} />
-    <Input type="password" name="password" class="text-black" bind:value={password} />
+    <Input
+      type="email"
+      name="email"
+      placeholder="Your email..."
+      bind:value={email} />
+    <Input
+      type="password"
+      name="password"
+      placeholder="Your password..."
+      bind:value={password} />
 
-    <Button type="submit">Sign Up</Button>
+    <Button type="submit" disabled={!(email && password)}>Sign Up</Button>
   </form>
 </main>
